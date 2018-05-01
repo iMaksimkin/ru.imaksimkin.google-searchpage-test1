@@ -4,7 +4,7 @@ package tests;
 public void SearchPageTest() throws Exception{
         Google google = Google.getNew();
         google.performSearch("search smth");
-        //ну, у меня отображается 10 ссылок
+        //page with 10 lnks 
         Assert.assertEquals(10, google.getLinkCount());
         google.clickOn(0);
         AnyPage anyPage =  google.get(AnyPage.class, 1);
